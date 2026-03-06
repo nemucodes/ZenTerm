@@ -34,6 +34,14 @@ Mobile connections drop when your screen turns off. Instead of fighting Android'
 * **Key Modifier Row**: Persistent row for `ESC`, `Tab`, `^Z`, `/`, and an `@` key (specifically exposed by setting the keyboard type to `emailAddress` for easy Claude file referencing).
 * **TrueColor Support**: Full `xterm-256color` and `truecolor` rendering.
 
----
+## 🔒 Security & Privacy First
 
+We are developers too, and we don't trust random apps with our SSH credentials. 
+ZenTerm is built with absolute paranoia regarding your data:
+
+* **Zero Telemetry**: ZenTerm does NOT collect analytics, crash logs, or usage data. It only connects to the servers you specify.
+* **Native Encrypted Storage**: All credentials (passwords and private keys) are securely encrypted and stored locally using Android's native Keystore (`EncryptedSharedPreferences` via `flutter_secure_storage`). Your secrets never leave your device.
+* **Private Key Authentication**: We fully support modern ED25519 and RSA private keys. You do not need to enable password authentication on your servers to use ZenTerm.
+
+---
 *ZenTerm is not trying to be a full Linux desktop replacement. It is a highly specialized weapon for lazy, efficient prompting.*
