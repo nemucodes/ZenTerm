@@ -4,7 +4,6 @@
 
 <div align="center">
   <img src="./ZenTerm-logo-128.png" alt="ZenTerm Logo" width="128" height="128">
-  <h1>ZenTerm</h1>
 </div>
 
 **"Don't leave your bed. Hack AI while lying down."**
