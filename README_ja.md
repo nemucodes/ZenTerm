@@ -1,8 +1,9 @@
 # ZenTerm 🧘‍♂️📱
 
 <div align="center">
-  <img src="https://via.placeholder.com/1200x400/0a0a0a/00ff00?text=ZenTerm+-+The+Ultimate+Mobile+SSH+Client+for+Claude" alt="ZenTerm Banner">
+  <img src="ZenTerm-logo-128.png" alt="ZenTerm Banner">
 </div>
+
 
 **"ベッドから出るな。寝ながらAIを操れ。"**
 
