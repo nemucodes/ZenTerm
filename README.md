@@ -1,9 +1,9 @@
 # ZenTerm 🧘‍♂️📱
 
-[日本語 (Japanese)](./README_ja.md)
+[日本語 (Japanese)](./README.md)
 
 <div align="center">
-  <img src="ZenTerm-logo-128.png" alt="ZenTerm Banner">
+  <img src="https://via.placeholder.com/1200x400/0a0a0a/00ff00?text=ZenTerm+-+The+Ultimate+Mobile+SSH+Client+for+Claude" alt="ZenTerm Banner">
 </div>
 
 **"Don't leave your bed. Hack AI while lying down."**
@@ -20,7 +20,7 @@ We completely eliminated the stress of "clunky arrow keys" and "broken CJK input
 Stop struggling with the tiny arrow keys on your soft keyboard.
 ZenTerm intercepts your Android's physical **Volume UP / DOWN buttons** and converts them into `↑` and `↓` arrow key strokes in the terminal. Navigate prompt history and CLI menus flawlessly with one hand, without even looking at the screen.
 
-### 2. Flawless IME & Voice Input 🗣️
+### 2. Flawless IME \u0026 Voice Input 🗣️
 Using a custom inline input overlay over xterm.js, ZenTerm provides 100% stable support for Gboard and other IME keyboards (including Japanese flick input and Voice Typing). No more garbled characters. Code with your voice.
 
 ### 3. Tmux-Optimized Seamless Resume 🔄
@@ -29,9 +29,6 @@ When you reopen the app, it reconnects and automatically runs `tmux attach`, res
 
 ### 4. AI-Focused Toolbar 🛠️
 Essential keys for LLM interaction and Vim (`Ctrl+C`, `Esc`, `Tab`, `Shift`) are permanently docked on the toolbar. Stop rogue AI loops with a single tap of your thumb.
-
-### 5. Zero-Config Claude Code Buttons ⚡
-No need to set up custom macros. ZenTerm comes pre-loaded with a dedicated "Claude" toolbar menu. Instantly launch Claude, run the verbose `--dangerously-skip-permissions` flag, or hit `--resume` with a single tap. It also includes built-in quick keys for LLM interactions, such as `Mode Switch (Shift+Tab)`, `^C`, and `^D`.
 
 ---
 
@@ -51,7 +48,7 @@ No need to set up custom macros. ZenTerm comes pre-loaded with a dedicated "Clau
 
 ---
 
-## 🐛 Support & Issues
+## 🐛 Support \u0026 Issues
 
 ZenTerm is an indie project. If you find a bug or want to request a new macro button, please open an issue in this repository.
 

@@ -1,13 +1,12 @@
 # ZenTerm 🧘‍♂️📱
 
 <div align="center">
-  <img src="ZenTerm-logo-128.png" alt="ZenTerm Banner">
+  <img src="https://via.placeholder.com/1200x400/0a0a0a/00ff00?text=ZenTerm+-+The+Ultimate+Mobile+SSH+Client+for+Claude" alt="ZenTerm Banner">
 </div>
-
 
 **"ベッドから出るな。寝ながらAIを操れ。"**
 
-ZenTermは、Claude CodeやローカルLLMなどの「AI CLIツール」を、Androidスマートフォンから快適に操作するために開発された **変態的** なSSHターミナルアプリです。
+ZenTermは、Claude CodeやローカルLLMなどの「AI CLIツール」を、Androidスマートフォンから快適に操作するために開発された**変態的**なSSHターミナルアプリです。
 既存のターミナルアプリが抱える「日本語入力のストレス」と「スマホでのキー操作のしんどさ」を、物理ボタンのハックと独自UIで完全に解決しました。
 
 ---
@@ -28,9 +27,6 @@ Gboard等の日本語フリック入力や音声入力が**一切文字化けせ
 
 ### 4. AI操作に特化した専用ツールバー 🛠️
 「Ctrl+C」「Esc」「Tab」など、LLMとの対話やエディタ操作に必須のキーをツールバーに常時配置。親指一つでAIの暴走を止められます。
-
-### 5. Claude Code 専用の起動＆操作ボタン ⚡
-面倒なマクロ設定は一切不要です。ツールバーから「Claudeモード」を開けば、`claude` コマンドはもちろん、スマホで打つのが地獄な `--dangerously-skip-permissions` や `--resume` などの長文フラグもワンタップで送信。対話中に必須となる `Mode切替 (Shift+Tab)` や `^C` などの専用キーも最初から搭載されています。
 
 ---
 
@@ -55,7 +51,7 @@ Gboard等の日本語フリック入力や音声入力が**一切文字化けせ
 
 ---
 
-## 🐛 バグ報告と機能要望 (Support & Issues)
+## 🐛 バグ報告と機能要望 (Support \u0026 Issues)
 
 ZenTermは個人開発のプロジェクトです。
 バグを見つけた場合や、「こんなマクロボタンが欲しい！」という要望がある場合は、このリポジトリの [Issues](https://github.com/nemucodes/ZenTerm-Docs/issues) からお気軽に報告してください。
