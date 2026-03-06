@@ -30,6 +30,9 @@ When you reopen the app, it reconnects and automatically runs `tmux attach`, res
 ### 4. AI-Focused Toolbar 🛠️
 Essential keys for LLM interaction and Vim (`Ctrl+C`, `Esc`, `Tab`, `Shift`) are permanently docked on the toolbar. Stop rogue AI loops with a single tap of your thumb.
 
+### 5. Zero-Config Claude Code Buttons ⚡
+No need to set up custom macros. ZenTerm comes pre-loaded with a dedicated "Claude" toolbar menu. Instantly launch Claude, run the verbose `--dangerously-skip-permissions` flag, or hit `--resume` with a single tap. It also includes built-in quick keys for LLM interactions, such as `Mode Switch (Shift+Tab)`, `^C`, and `^D`.
+
 ---
 
 ## 📥 Download
