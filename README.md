@@ -3,7 +3,7 @@
 [日本語 (Japanese)](./README_ja.md)
 
 <div align="center">
-  <img src="https://via.placeholder.com/1200x400/0a0a0a/00ff00?text=ZenTerm+-+The+Ultimate+Mobile+SSH+Client+for+Claude" alt="ZenTerm Banner">
+  <img src="ZenTerm-logo-128.png" alt="ZenTerm Banner">
 </div>
 
 **"Don't leave your bed. Hack AI while lying down."**
