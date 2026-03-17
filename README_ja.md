@@ -1,65 +1,116 @@
-# ZenTerm 🧘‍♂️📱
+<p align="center">
+  <img src="ZenTerm-logo-128.png" alt="ZenTerm" width="128" height="128">
+</p>
 
-<div align="center">
-  <img src="./ZenTerm-logo-128.png" alt="ZenTerm Logo" width="128" height="128">
-</div>
+<h1 align="center">ZenTerm</h1>
 
-**"ベッドから出るな。寝ながらAIを操れ。"**
+<p align="center">
+  <strong>Claude CodeとAI開発者のためのAndroid SSHターミナル</strong>
+</p>
 
-ZenTermは、Claude CodeやローカルLLMなどの「AI CLIツール」を、Androidスマートフォンから快適に操作するために開発された**変態的**なSSHターミナルアプリです。
-既存のターミナルアプリが抱える「日本語入力のストレス」と「スマホでのキー操作のしんどさ」を、物理ボタンのハックと独自UIで完全に解決しました。
+<p align="center">
+  <a href="#機能">機能</a> •
+  <a href="#スクリーンショット">スクショ</a> •
+  <a href="#推奨セットアップ">セットアップ</a> •
+  <a href="#ダウンロード">ダウンロード</a> •
+  <a href="PRIVACY_POLICY.md">プライバシーポリシー</a>
+</p>
 
----
-
-## 🔥 キラー機能 (Features)
-
-### 1. 音量ボタンによるCLI操作ハック 🎛️
-ソフトウェアキーボードの矢印キーやEnterキーをちまちま押す必要はもうありません。
-Androidの物理的な**「音量UP / DOWNボタン」**をターミナルの「↑ / ↓」キーに変換。画面を見ずに、片手でプロンプト履歴や選択肢をサクサク移動できます。
-
-### 2. フリック＆音声入力に完全対応 🗣️
-xterm.jsベースのターミナルに独自のインライン入力オーバーレイを被せています。
-Gboard等の日本語フリック入力や音声入力が**一切文字化けせず、完璧に動作します**。寝言でコーディングが可能です。
-
-### 3. Tmux特化のシームレス復帰 🔄
-スマホ特有の「画面スリープによる接続切れ」を前提とした設計。
-アプリを開き直した際、切断されていてもワンタップ（または自動）で元のTmuxセッションに `tmux attach` し、前の作業状態に一瞬で復帰します。
-
-### 4. AI操作に特化した専用ツールバー 🛠️
-「Ctrl+C」「Esc」「Tab」など、LLMとの対話やエディタ操作に必須のキーをツールバーに常時配置。親指一つでAIの暴走を止められます。
+<p align="center">
+  <a href="README.md">English</a>
+</p>
 
 ---
 
-## 📥 ダウンロード (Download)
-[![Get it on Google Play](https://play.google.com/intl/en_us/badges/static/images/badges/en_badge_web_generic.png)](https://play.google.com/store/apps/details?id=com.nemucodes.zenterm)  
-*(※現在審査中 / Coming Soon)*
+既存のSSHクライアントはサーバーに繋いで設定を確認して切断、という短時間の作業を想定して作られています。ZenTermは違います。リモートマシンにSSHしてAIエージェントを動かし、出力を確認し、フローを維持する——ノートPCなしで。
+
+tmuxみたいないい技術があるのだから、ただ「たまたま動く」んじゃなくて、ちゃんと活かすアプリが欲しかった。
+
+## 機能
+
+### 音量ボタン → カーソルキー
+
+モバイルでのターミナル操作で最大の壁はカーソル移動。ZenTermは音量ボタンを矢印キーにマッピングします。方向の反転やロングプレスも設定可能。外付けキーボードなしでClaude Codeのメニュー操作を快適にナビゲートできます。
+
+### Claude Code に最適化
+
+- Claude Code 動作中を自動検出 → ツールバーが自動で切り替わる
+- ワンタップ起動: `claude` / `--dangerously-skip-permissions` / `--resume`
+- カスタマイズ可能なコマンドボタン: `/clear`, `/new`, `/model`, `^C`, `^D` など
+- 256色 + トゥルーカラー対応
+
+### tmuxネイティブな操作体験
+
+- 接続時にtmuxセッションを自動作成 or 既存セッションにアタッチ
+- マルチタブ対応（最大5タブ）、各タブが独立したtmuxウィンドウ
+- ツールバーからペイン分割（水平/垂直）・ナビゲーション・削除
+- **Monitorモード**: 外部tmuxセッションに読み取り専用でアタッチ——長時間動くAIエージェントの進捗を、うっかりキーを押す心配なく眺められる
+- プレフィックスキー設定可能（C-b / C-a / C-space またはカスタム）
+
+### SFTPファイルブラウザ
+
+- 20以上の言語に対応したシンタックスハイライト（Dart, Python, JS, Rust, Go など）
+- Markdownレンダリング（ソース表示への切り替え可能）
+- 画像プレビュー＋ピンチズーム（PNG / JPG / GIF / WebP）
+
+### 音声入力
+
+Google Speech Servicesを使って、音声でターミナルにコマンドを入力できます。
+
+### セキュリティ設計
+
+- SSH認証情報はAndroid Keystoreで暗号化（平文保存なし）
+- アナリティクスなし・テレメトリなし——データはデバイスの外に出ない
+- 権限はINTERNETのみ。連絡先・ストレージ・位置情報へのアクセスなし
+- dartssh2（Pure Dart SSH）採用——ネイティブバイナリなし、隠れた通信なし
+
+## スクリーンショット
+
+<p align="center">
+  <img src="screenshots/01_splash.png" width="180">
+  <img src="screenshots/02_claude.png" width="180">
+  <img src="screenshots/03_settings.png" width="180">
+  <img src="screenshots/04_pane.png" width="180">
+</p>
+
+<p align="center">
+  <img src="screenshots/05_sftp.png" width="180">
+  <img src="screenshots/06_syntax.png" width="180">
+  <img src="screenshots/07_markdown.png" width="180">
+  <img src="screenshots/08_voice.png" width="180">
+</p>
+
+## 推奨セットアップ
+
+```
+Androidスマートフォン / タブレット
+     ↓ Tailscale経由でSSH
+自宅PC / 開発サーバー（tmuxインストール済み）
+     ↓
+tmux上で動くClaude Code
+```
+
+[Tailscale](https://tailscale.com/)を両デバイスにインストールするだけで、ポート開放不要・VPN設定不要で自宅マシンに安全にアクセスできます。
+
+> **注意:** ZenTermはリモートサーバーにtmuxがインストールされている必要があります。マルチタブ・Monitorモード・ペイン操作などの主要機能はtmux統合に依存しています。
+
+## ダウンロード
+
+<!-- Play Storeバッジは公開後に追加 -->
+**Google Playで近日公開** — 買い切り、サブスクリプションなし。
+
+## サポート
+
+- お問い合わせ: nemucodes@gmail.com
+- プライバシーポリシー: [PRIVACY_POLICY.md](PRIVACY_POLICY.md)
+
+## 技術スタック
+
+[Flutter](https://flutter.dev/) と [dartssh2](https://pub.dev/packages/dartssh2) で構築。
 
 ---
 
-## ⚙️ 使い方・設定 (How to Use)
-
-### 音量ボタンハックの設定
-1. アプリ右上の「歯車（Settings）」アイコンをタップします。
-2. 「Volume Button Hack」のトグルをONにします。
-   * *※この設定がONの間、ターミナル画面を開いている時はスマホのメディア音量は変更できなくなります。*
-3. ターミナルに戻り、音量UPを押すとコマンド履歴が一つ前に戻り（↑キー）、DOWNを押すと次へ進みます（↓キー）。
-
-### 音声入力でプロンプトを投げる
-1. ツールバーの「マイク」アイコン（または入力フィールド）をタップします。
-2. Google音声入力等で「ここをリファクタリングして」と喋ります。
-3. そのまま送信（Enter）を押すと、ターミナルに日本語文字列が流し込まれます。
-
----
-
-## 🐛 バグ報告と機能要望 (Support \u0026 Issues)
-
-ZenTermは個人開発のプロジェクトです。
-バグを見つけた場合や、「こんなマクロボタンが欲しい！」という要望がある場合は、このリポジトリの [Issues](https://github.com/nemucodes/ZenTerm-Docs/issues) からお気軽に報告してください。
-
-* **[Create a New Issue](https://github.com/nemucodes/ZenTerm-Docs/issues/new)**
-
----
-
-## 👤 開発者 (Developer)
-**Nemu** ([@nemucodes](https://x.com/nemucodes))  
-*Building tools for lazy hackers.*
+<p align="center">
+  <strong>nemucodes</strong><br>
+  Building tools for lazy hackers.
+</p>
